@@ -5,6 +5,7 @@ socket.on("connect", () => {
   socket.emit("client cookoo");
 });
 
-socket.on("welcome", (data) => {
-  console.log(data);
+//listen for the nsList event
+socket.on("nsList", (nsData) => {
+  console.log(nsData);
 });

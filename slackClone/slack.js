@@ -9,6 +9,6 @@ const expressServer = app.listen(9000);
 const io = socketio(expressServer);
 
 io.on("connection", (socket) => {
-  console.log(socket.id, "has connected");
   socket.emit("welcome", "HELLOWOWOOW");
+  socket.emit("nsList", namespace);
 });
